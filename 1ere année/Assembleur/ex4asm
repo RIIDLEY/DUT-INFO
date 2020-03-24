@@ -1,0 +1,19 @@
+.data
+	a: .word 2
+	b: .word -3
+	c: .word 8
+
+	
+.text main:
+
+	lw $t1,a
+	lw $t2,b
+	lw $t3,c
+
+
+	slt $t0,$t2,$0
+	mul $t2,$t2,-1
+	
+	li $v0,1
+	move $a0, $t2
+	syscall

@@ -1,0 +1,30 @@
+body
+{
+    width: 900px;
+}
+#milieu{
+      display: flex;
+}
+#entete
+{
+    background-color: green;
+    overflow: hidden;
+}
+
+#principal
+{
+    background-color: yellow;
+        flex-grow:3;
+}
+
+#navigation
+{
+    background-color: red;
+    width: 200px;
+}
+
+#bas-de-page
+{
+    background-color: grey;
+    overflow: hidden;
+}

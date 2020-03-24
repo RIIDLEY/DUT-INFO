@@ -1,0 +1,5 @@
+Tapez
+chmod +x runme.sh
+
+puis :
+./runme.sh

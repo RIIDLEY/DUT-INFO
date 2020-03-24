@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>exo-1</title>
+		<link type="text/css" rel="stylesheet" href="exo-1.css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="exo-1.js"></script>
+	</head>
+	<body>
+		<h1>Vos identifiants:</h1>
+		<form method="POST" action="traitement.html">
+			<p><label>Nom :   <input id="nom"   name="nom"   type="text"/></label><span id="erreur-nom" class="erreur">Non valide !</span></p>
+			<p><label>Login : <input id="login" name="login" type="text"/></label></p>
+				<p><label>E-mail :   <input id="email"   name="email"   type="text"/></label><span id="erreur-email" class="erreur">Non valide!</span></p>
+			<p><label>Mot de passe :   <input id="mdp"   name="mdp"   type="password"/></label><span id="erreur-mdp" class="erreur" >Trop Court!</span></p>
+			<p><label>Confirmation : <input id="conf" name="conf" type="password"/></label><span id="erreur-conf" class="erreur">Différents!</span></p>
+			<input type="submit" name="submit" value="Envoyé" />
+		</form>
+	</body>
+</html>

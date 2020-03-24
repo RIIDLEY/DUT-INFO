@@ -1,0 +1,76 @@
+Question 1.1)
+
++----------------------------------------------------------+
+|                        QUERY PLAN                        |
++----------------------------------------------------------+
+| Seq Scan on diary  (cost=0.00..21.50 rows=1000 width=12) |
++----------------------------------------------------------+
+
+Question 1.2)
+
++----------------+
+| cpu_tuple_cost |
++----------------+
+| 0.01           |
++----------------+
+
+
+Nb_de_Blocs=9
+
+Cout = Nb_de_Blocs_de_la_Relation+Nb_de_Tuples_de_la_Relation× CPU_TUPLE_COST
+
+Cout = 9+1000*0.01 + 1000 * 0.0025
+
+Cout = 19
+
+Question 1.3)
+Temps de calcul egale car il n'y a pas de stat, il faut EXPLAIN et RECHARGE les tables
++----------------------------------------------------------------------------+
+|                                 QUERY PLAN                                 |
++----------------------------------------------------------------------------+
+| Index Scan using diary_pkey on diary  (cost=0.00..10.25 rows=100 width=12) |
+|   Index Cond: (dy_id >= 900)                                               |
++----------------------------------------------------------------------------+
+
++---------------------------------------------------------+
+|                       QUERY PLAN                        |
++---------------------------------------------------------+
+| Seq Scan on diary  (cost=0.00..23.98 rows=990 width=12) |
+|   Filter: (dy_id >= 10)                                 |
++---------------------------------------------------------+
+
+
+Sélectivité = pourcentage de tples qui reponde a la requete
+
+selectivite 1er = 100/1000 *100 = 10%
+selectivite 2eme = 990/1000 *100 = 99%
+On relance avec \i
+
+Il fait le mm temps d'exécution alors que ce sont 2 requêtes différentes.
+
+Question 1.4)On recharge les fichiers et on vois que le temps de calcul est plus realiste
++----------------------------------------------------------------------------+
+|                                 QUERY PLAN                                 |
++----------------------------------------------------------------------------+
+| Index Scan using diary_pkey on diary  (cost=0.00..10.25 rows=100 width=12) |
+|   Index Cond: (dy_id >= 900)                                               |
++----------------------------------------------------------------------------+
+
++---------------------------------------------------------+
+|                       QUERY PLAN                        |
++---------------------------------------------------------+
+| Seq Scan on diary  (cost=0.00..19.60 rows=240 width=12) |
+|   Filter: (dy_id >= 10)                                 |
++---------------------------------------------------------+
+
+Question 1.5)
+
+set enable_indexscan to off;
+set enable_bitmapscan to off;
+Le temps de calcul à augmente	
+
+Question 1.6)
+
+Donner co_name,pre_desc,ord_qty depuis les tables : companies,orders,products. 
+Si et seulement si, co_id = ord_conpany ET pr_code = ord_product ET ord_qty > 60		
+	

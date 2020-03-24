@@ -1,0 +1,12 @@
+#ma-boite
+{
+    background-color: #77216F;
+    display: flex;
+
+}
+
+#ma-boite div
+{
+    background-color: #FF950E;
+    margin: 1em;
+}

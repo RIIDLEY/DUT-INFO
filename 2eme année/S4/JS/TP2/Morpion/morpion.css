@@ -1,0 +1,25 @@
+td{
+    border: 1px solid #333;
+    width: 100px;
+    height: 100px;
+
+}
+
+td:hover{
+  background-color: gold;
+}
+
+table{
+    border-collapse:collapse;
+}
+
+
+.croix{
+  	background-image: url(case_croix.png);
+    background-size: 100px;
+}
+
+.rond{
+  	background-image: url(case_rond.png);
+    background-size: 100px;
+}

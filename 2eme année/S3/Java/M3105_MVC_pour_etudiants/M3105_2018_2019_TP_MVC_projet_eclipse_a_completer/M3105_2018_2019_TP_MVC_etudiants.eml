@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inheritJdk="true">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="fenetre_graphique.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/fenetre_graphique.jar!/"/>
+	</lib>
+	<levels>
+		<level name="classes_metiers" value="project"/>
+	</levels>
+</component>

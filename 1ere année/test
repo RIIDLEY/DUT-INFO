@@ -1,0 +1,14 @@
+%%sh
+
+# Essayez aussi dans un terminal.
+
+echo "Ceci est un texte à supprimer" 1>/tmp/aeffacer.txt
+cat /tmp/aeffacer.txt /tmp/cefichiernexistepas
+
+# Observez bien la différence entre > et >> : le premier recommence un fichier au début, le deuxième complète
+cat /tmp/aeffacer.txt /tmp/cefichiernexistepas 2>/tmp/erreur.txt
+rm /tmp/aef                                                      facer.txt /tmp/cefichiernexistepas 2>>/tmp/erreur.txt
+echo "La commande a renvoyé un code de retour $?"
+echo "--------------------------------------"
+echo "La commande a affiché sur la sortie d'erreur :"
+cat /tmp/erreur.txt

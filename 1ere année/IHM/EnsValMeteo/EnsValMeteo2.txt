@@ -1,0 +1,7 @@
+Tokyo7Lundi	10.0	32.0
+Mardi	15.0	23.0
+Mercredi	-10.0	24.0
+Jeudi	5.0	13.0
+Vendredi	22.0	6.0
+Samedi	7.0	19.0
+Dimanche	14.0	18.0

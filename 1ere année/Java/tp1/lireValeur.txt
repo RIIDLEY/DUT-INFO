@@ -1,0 +1,38 @@
+// Ã  mettre au dÃ©but du fichier avant la dÃ©claration de la classe
+
+import java.util.*;
+
+// code Ã  intÃ©grer pour lire des valeurs au clavier
+
+Scanner sc = new Scanner(System.in);
+
+// saisie d'une chaÃ®ne de caractÃ¨res
+System.out.println("Veuillez saisir une chaÃ®ne de caractÃ¨res :");
+String str = sc.nextLine();
+System.out.println("Vous avez saisi : " + str);
+
+// saisie d'un entier
+System.out.println("Veuillez saisir un nombre :");
+int i = sc.nextInt();
+System.out.println("Vous avez saisi le nombre : " + i);
+
+// saisie d'un float, double, long, octet 
+float f = sc.nextFloat();
+//On vide la ligne avant d'en lire une autre
+sc.nextLine();
+
+double d = sc.nextDouble();
+//On vide la ligne avant d'en lire une autre
+sc.nextLine();
+
+long l = sc.nextLong();
+//On vide la ligne avant d'en lire une autre
+sc.nextLine();
+
+byte b = sc.nextByte();
+//etc
+
+// ne pas oublier de fermer le scanner
+sc.close();
+
+

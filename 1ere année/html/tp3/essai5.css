@@ -1,0 +1,42 @@
+body
+{
+    margin: 0;
+}
+
+#exterieur
+{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#entete
+{
+    background-color: green;
+    overflow: hidden;
+}
+
+#milieu
+{
+    display: flex;
+}
+
+#principal
+{
+    background-color: yellow;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+#navigation
+{
+    background-color: red;
+    width: 180px;
+    padding: 10px;
+}
+
+#bas-de-page
+{
+    background-color: grey;
+    overflow: hidden;
+}

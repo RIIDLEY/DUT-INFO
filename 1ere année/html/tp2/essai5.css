@@ -1,0 +1,23 @@
+li{
+  display:inline;
+  border: 1px solid #000000;
+  padding: 4px;
+  background-color: #bbb;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+
+li:hover{
+  background-color:pink;
+}
+a{
+
+  color:black;
+  text-decoration: none;
+
+}
+.active{
+  background: white;
+  border-bottom: 0px;
+}
