@@ -9,8 +9,8 @@ class Controller_set extends Controller{
   }
 
   public function action_add(){
-      $m = Model::getModel();
-    if(isset($_POST['category']) and !preg_match("#^\s*$#",$_POST['category']) and isset($_POST['name']) and !preg_match("#^\s*$#",$_POST['name']) and isset($_POST['year']) and preg_match("#^[0-9]*$#",$_POST['year'])){
+        $m = Model::getModel();
+      if(isset($_POST['category']) and !preg_match("#^\s*$#",$_POST['category']) and isset($_POST['name']) and !preg_match("#^\s*$#",$_POST['name']) and isset($_POST['year']) and preg_match("#^[0-9]*$#",$_POST['year'])){
         $info = ['year'=>$_POST['year'],'category'=>$_POST['category'],'name'=>$_POST['name'],'birthdate'=>intval($_POST['birthdate']),'birthplace'=>$_POST['birthPlace'],'county'=>$_POST['county'],'motivation'=>$_POST['motivation']];
         $data = $m->addNobelPrize($info);
           $this->message("C'est bon");
